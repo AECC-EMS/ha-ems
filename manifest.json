@@ -1,0 +1,22 @@
+{
+  "domain": "ha_ems_cloud",
+  "name": "HA-EMS CLOUD",
+  "codeowners": ["@shuoxd","@yan1ib0"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/",
+
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "requirements": ["aiohttp"],
+  "ssdp": [],
+  "version": "1.1.0",
+  "zeroconf": [],
+  "translations": {
+    "_": [
+      "zh",
+      "en"
+    ]
+  },
+  "platforms": ["sensor", "switch"]
+}

@@ -1,0 +1,9 @@
+{
+  "config": {
+    "step": {
+      "confirm_discovery": {
+        "description": "\n\nSN: {device_sn}\nIP: {device_ip}\n Type: {device_type}"
+      }
+    }
+  }
+}
