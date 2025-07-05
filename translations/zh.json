@@ -1,0 +1,21 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "已配置"
+        },
+        "error": {
+            "cannot_connect": "网络无法连接",
+            "invalid_auth": "用户认证无效",
+            "unknown": "未知错误"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "主机地址",
+                    "password": "密码",
+                    "username": "用户名"
+                }
+            }
+        }
+   }
+}
