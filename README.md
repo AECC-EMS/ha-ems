@@ -1,50 +1,66 @@
-本指南将帮助你将 ha-mes 插件集成到 HomeAssistant，并设置相应的自定义前端面板。
+# HA-EMS Integration for Home Assistant
 
-## 下载安装包
-+ ✅ All in one  ZIP Package:  
-[Download Here](https://cdn.shuoxd.com/Aecc/HA/aecc-ha.zip)
+[English](./README.md) | [简体中文](./README_zh.md)
+# Integration Guide for HA-EMS Plugin with Home Assistant
 
-## 安装 `ha_ems_cloud`（云端插件）
-## <font style="color:rgb(31, 35, 40);">安装前环境准备</font>
-<font style="color:rgb(89, 99, 110);">已安装的Home Assistant 版本：</font>
-+ <font style="color:rgb(89, 99, 110);">Core ≥ 2025.2.1</font>
-+ <font style="color:rgb(89, 99, 110);">Operating System ≥ 13.0</font>
-+ 
+This guide will help you integrate the `ha_ems_cloud` plugin into your Home Assistant instance and optionally set up a custom frontend panel.
 
-### 方法 3：通过[Samba](https://github.com/home-assistant/addons/tree/master/samba)<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">或</font><font style="color:rgb(31, 35, 40);"> </font>[<font style="color:rgb(9, 105, 218);">FTPS</font>](https://github.com/hassio-addons/addon-ftp)<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">手动安装</font>
+## 📦 Download Installation Package
 
++ ✅ All-in-One ZIP Package:  
+[Download Here](https://cdn.shuoxd.com/Aecc/HA/aecc-ha.zip )
 
-将 `ha_ems_cloud.zip`解压后的文件夹，复制到 Home Assistant 的 `{homeassistant_work_dir}/config/custom_components` 文件夹下。</font>
+## ⚙️ Install `ha_ems_cloud` (Cloud Plugin)
 
+### Prerequisites
 
-## 配置
-### 登录
-[<font style="color:rgb(9, 105, 218);">设置 > 设备与服务 > 添加集成</font>](https://my.home-assistant.io/redirect/brand/?brand=xiaomi_home)<font style="color:rgb(31, 35, 40);"> > 搜索“</font>`HA-EMS CLOUD` > 下一步 > 请点击此处进行登录 > 使用AECC APP账号登录（如果没有AECC账号可以扫描下面二维码下载安装APP，注册账号和家庭）</font>
+Before installing, ensure that your Home Assistant environment meets the following requirements:
++ Home Assistant Core ≥ 2025.2.1  
++ Operating System ≥ 13.0  
 
+### Method 3: Manual Installation via [Samba](https://github.com/home-assistant/addons/tree/master/samba ) or [FTPS](https://github.com/hassio-addons/addon-ftp )
 
-### 添加设备
-登录成功后，会弹出会话框“选择家庭”。您可以选择需要添加的家庭，该家庭内的所有设备将导入 Home Assistant 。
+1. Extract the contents of `ha_ems_cloud.zip`.
+2. Copy the extracted folder to the following directory in your Home Assistant configuration:
 
 
-## HA-EMS PANEL（可选）
-> 如果你没有自定义页面的精力。我们提供了一个简易的页面，配置了基本的数据显示和开关功能。
+## 🔧 Configuration
+
+### 🔐 Login
+
+1. Go to **Settings > Devices & Services > Add Integration**  
+   [Link to page](https://my.home-assistant.io/redirect/brand/?brand=xiaomi_home)
+2. Search for `HA-EMS CLOUD`
+3. Click Next
+4. Click on the login link when prompted
+5. Log in using your AECC APP account  
+   *(If you don't have an AECC account, you can scan the QR code below to download the app and register an account and family)*
+
+### ➕ Add Devices
+
+After logging in successfully, a dialog box titled "Select Family" will appear. You can choose the family you want to add, and all devices within that family will be imported into Home Assistant.
+
+## 🖥️ HA-EMS PANEL (Optional)
+
+> If you do not wish to create a custom frontend page yourself, we provide a simple panel with basic data display and switch controls.
+
+File structure:
 ```plain
 {homeassistant_work_dir}/config
 └── www/
-   ├──  ha-ems-panel.mjs
+    └── ha-ems-panel.mjs
 ```
-
-### 安装步骤:
-1. 复制文件夹内的 `ha-ems-panel.mjs`文件到<font style="color:rgb(31, 35, 40);">Home Assistant 的</font>:  
-`config/www/`文件夹下。
-2. 在 `configuration.yaml`中配置自定义页面:
-
-```yaml
+### Installation Steps:
+1. Copy the ha-ems-panel.mjs file from the downloaded package into your Home Assistant's config/www/ folder.
+2. Edit your configuration.yaml file and add the following lines:
+```
 panel_custom:
   - name: ha-ems-panel
-    sidebar_title: ems—panel #你的页面名
+    sidebar_title: ems-panel # Customize this to your desired panel name
     sidebar_icon: mdi:chart-donut
     module_url: /local/ha-ems-panel.mjs
 ```
+3. Save the file and restart Home Assistant.
+4. Clear your browser cache and refresh the page to see the new panel.
 
-4. 清除浏览器刷新缓存就可以看到页面了。
+
