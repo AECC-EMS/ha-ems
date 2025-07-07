@@ -7,7 +7,7 @@
 + ✅ All in one  ZIP Package:  
 [Download Here](https://cdn.shuoxd.com/Aecc/HA/aecc-ha.zip)
 
-## 安装 `ha_ems_cloud`（云端插件）
+## 安装 `ha_ems`（云端插件）
 ## <font style="color:rgb(31, 35, 40);">安装前环境准备</font>
 <font style="color:rgb(89, 99, 110);">已安装的Home Assistant 版本：</font>
 + <font style="color:rgb(89, 99, 110);">Core ≥ 2025.2.1</font>
@@ -17,7 +17,7 @@
 ### 方法 3：通过[Samba](https://github.com/home-assistant/addons/tree/master/samba)<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">或</font><font style="color:rgb(31, 35, 40);"> </font>[<font style="color:rgb(9, 105, 218);">FTPS</font>](https://github.com/hassio-addons/addon-ftp)<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">手动安装</font>
 
 
-将 `ha_ems_cloud.zip`解压后的文件夹，复制到 Home Assistant 的 `{homeassistant_work_dir}/config/custom_components` 文件夹下。</font>
+将 `ha_ems.zip`解压后的文件夹，复制到 Home Assistant 的 `{homeassistant_work_dir}/config/custom_components` 文件夹下。</font>
 
 
 ## 配置
@@ -44,10 +44,10 @@
 
 ```yaml
 panel_custom:
-  - name: ha-ems-panel
+  - name: ha_ems-panel
     sidebar_title: ems—panel #你的页面名
     sidebar_icon: mdi:chart-donut
-    module_url: /local/ha-ems-panel.mjs
+    module_url: /local/ha_ems-panel.mjs
 ```
 3. 保存配置文件并退出，重启Home Assistant.
 4. 清除浏览器刷新缓存就可以看到页面了。

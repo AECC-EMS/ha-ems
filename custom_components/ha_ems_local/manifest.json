@@ -1,0 +1,12 @@
+{
+  "domain": "ha_ems_local",
+  "name": "HA-EMS LOCAL",
+  "documentation": "https://www.home-assistant.io/integrations/example_zeroconf",
+  "dependencies": [],
+  "codeowners": ["@shuoxd","@yan1ib0"],
+  "requirements": ["zeroconf>=0.36.8"],
+  "zeroconf": ["_http._tcp.local."],
+  "i18n": true,
+  "version": "1.1.0",
+  "i18n_plural": false
+}

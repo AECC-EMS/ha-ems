@@ -3,14 +3,14 @@
 [English](./README.md) | [简体中文](./README_zh.md)
 # Integration Guide for HA-EMS Plugin with Home Assistant
 
-This guide will help you integrate the `ha_ems_cloud` plugin into your Home Assistant instance and optionally set up a custom frontend panel.
+This guide will help you integrate the `ha_ems` plugin into your Home Assistant instance and optionally set up a custom frontend panel.
 
 ## 📦 Download Installation Package
 
 + ✅ All-in-One ZIP Package:  
 [Download Here](https://cdn.shuoxd.com/Aecc/HA/aecc-ha.zip )
 
-## ⚙️ Install `ha_ems_cloud` (Cloud Plugin)
+## ⚙️ Install `ha_ems` (Cloud Plugin)
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ Before installing, ensure that your Home Assistant environment meets the followi
 
 ### Method 3: Manual Installation via [Samba](https://github.com/home-assistant/addons/tree/master/samba ) or [FTPS](https://github.com/hassio-addons/addon-ftp )
 
-1. Extract the contents of `ha_ems_cloud.zip`.
+1. Extract the contents of `ha_ems.zip`.
 2. Copy the extracted folder to the following directory in your Home Assistant configuration:
 
 

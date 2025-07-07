@@ -1,4 +1,4 @@
-DOMAIN = "ha_ems_cloud"
+DOMAIN = "ha_ems"
 BASE_URL = "https://monitor.ai-ec.cloud:8443"
 LOGGER_NAME = "custom_components.ha_ems"
 

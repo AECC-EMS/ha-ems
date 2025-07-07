@@ -1,5 +1,5 @@
 {
-  "domain": "ha_ems_cloud",
+  "domain": "ha_ems",
   "name": "HA-EMS CLOUD",
   "codeowners": ["@shuoxd","@yan1ib0"],
   "config_flow": true,
